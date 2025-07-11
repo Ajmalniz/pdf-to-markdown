@@ -50,6 +50,28 @@ def get_markdown_download_link(markdown_text, filename="output.md"):
 
 # Streamlit app
 st.title("PDF to Markdown Converter")
+
+# Add a footer with social media links
+st.sidebar.markdown("### Connect with me:")
+st.sidebar.markdown(
+    """
+    <a href="https://www.linkedin.com/in/ajmal-ai-engineer" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="LinkedIn" width="25">
+    </a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/ajmalniz" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" alt="GitHub" width="25">
+    </a>
+    """,
+    unsafe_allow_html=True,
+)
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("### About")
+st.sidebar.info(
+    "This is a PDF to Markdown converter that uses OCR to extract text from scanned documents."
+)
+
 st.write("Upload a PDF file to convert it to Markdown.")
 
 # File uploader
